@@ -2,12 +2,14 @@
 
 namespace TerminalClock
 {
-	[HarmonyPatch(typeof(HUDManager), "SetClock")]
+	[HarmonyPatch(typeof(HUDManager))]
 	public static class OnSetClock
 	{
-		public static void Postfix(ref HUDManager __instance)
+		[HarmonyPatch("SetClock")]
+		[HarmonyPostfix]
+		public static void SetClock(ref HUDManager __instance)
 		{
-			Plugin._clockText.text = __instance.clockNumber.text.Replace('\n', ' ');
+			Plugin.ClockText.text = __instance.clockNumber.text.Replace('\n', ' ');
 		}
 	}
 }

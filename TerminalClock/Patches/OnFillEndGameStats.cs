@@ -2,12 +2,14 @@
 
 namespace TerminalClock.Patches
 {
-	[HarmonyPatch(typeof(HUDManager), "FillEndGameStats")]
+	[HarmonyPatch(typeof(HUDManager))]
 	public static class OnFillEndGameStats
 	{
-		public static void Postfix()
+		[HarmonyPatch("FillEndGameStats")]
+		[HarmonyPostfix]
+		public static void FillEndGameStats()
 		{
-			Plugin._clockText.text = Plugin.configDisplayInSpace.Value ? "In Space" : "";
+			Plugin.ClockText.text = Plugin.configDisplayInSpace.Value ? "In Space" : "";
 		}
 	}
 }

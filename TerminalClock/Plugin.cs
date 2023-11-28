@@ -8,12 +8,12 @@ using static TerminalApi.Patches.TerminalAwakePatch;
 
 namespace TerminalClock
 {
-	[BepInPlugin("atomic.terminalclock", "Terminal Clock", "1.0.0")]
+	[BepInPlugin("atomic.terminalclock", "Terminal Clock", "1.0.1")]
 	[BepInDependency("atomic.terminalapi", MinimumDependencyVersion: "1.1.0")]
 	public partial class Plugin : BaseUnityPlugin
 	{
 		internal static GameObject _clock;
-		internal static TextMeshProUGUI _clockText => _clock.GetComponent<TextMeshProUGUI>();
+		internal static TextMeshProUGUI ClockText => _clock.GetComponent<TextMeshProUGUI>();
 		private void Awake()
 		{
 			SetupConfig();
@@ -29,7 +29,7 @@ namespace TerminalClock
 			_clock.name = "Clock";
 			_clock.transform.localPosition = new Vector3(255f, 200.6003f, -1.0003f);
 			_clock.transform.localScale = new Vector3(0.9f, 0.9f, 1);
-			_clockText.text = configDisplayInSpace.Value ? "In Space" : "";
+			ClockText.text = configDisplayInSpace.Value ? "In Space" : "";
 		}
 	}
 }
