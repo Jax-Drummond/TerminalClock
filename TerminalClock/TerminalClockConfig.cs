@@ -5,11 +5,11 @@ namespace TerminalClock
 {
 	public partial class Plugin
 	{
-		internal static ConfigEntry<bool> configDisplayInSpace;
+		internal static ConfigEntry<bool> configDisplayUnkownTime;
 
 		internal void SetupConfig()
 		{
-			configDisplayInSpace = Config.Bind("General", "showInSpace", true, "Whether or not to show 'In Space' when in space.");
+			configDisplayUnkownTime = Config.Bind("General", "displayUnknown", true, "Whether or not to show '??:??' when the time is unkown.");
 		}
 	}
 }

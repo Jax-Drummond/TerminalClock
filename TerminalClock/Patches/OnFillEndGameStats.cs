@@ -9,7 +9,7 @@ namespace TerminalClock.Patches
 		[HarmonyPostfix]
 		public static void FillEndGameStats()
 		{
-			Plugin.ClockText.text = Plugin.configDisplayInSpace.Value ? "In Space" : "";
+			Plugin.ClockText.text = Plugin.configDisplayUnkownTime.Value ? Plugin.UNKOWNTIME : "";
 		}
 	}
 }
