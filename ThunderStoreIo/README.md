@@ -7,6 +7,7 @@ Adds a clock to the top right of the terminal so you can now effectively keep tr
 ## Installation
 
 Just drag and drop the BepInEx folder to your Lethal Company root folder(Where the Lethal Company.exe is).
+Or just use the ThunderStore mod loader.
 
 ## Images
 
@@ -14,5 +15,10 @@ Just drag and drop the BepInEx folder to your Lethal Company root folder(Where t
 ![OnMoon](https://i.imgur.com/j9F6atM.png)
 
 - When in space
-![InSpace](https://i.imgur.com/fZJnimX.png)
+![InSpace](https://i.imgur.com/k1WpNDZ.png)
 
+## Changelog
+
+### Version 1.0.4
+
+- Fixed a bug that occured when using this mod with LethalLib
