@@ -22,3 +22,7 @@ Or just use the ThunderStore mod loader.
 ### Version 1.0.4
 
 - Fixed a bug that occured when using this mod with LethalLib
+
+### Version 1.0.5
+
+- Fixed clock not being created when hosting a game for the second time
